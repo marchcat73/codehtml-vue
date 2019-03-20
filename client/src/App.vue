@@ -45,6 +45,31 @@
         </v-btn>
         <v-btn
           flat
+          class="text-none"
+          v-if="isLoggedIn"
+          :to="'/categories'"
+        >
+          Категории
+        </v-btn>
+        <v-btn
+          flat
+          class="text-none"
+          v-if="isLoggedIn"
+          :to="'/works'"
+        >
+          Работы
+        </v-btn>
+        <v-btn
+          flat
+          class="text-none"
+          v-if="isLoggedIn"
+          :to="'/technologies'"
+        >
+          Технологии
+        </v-btn>
+        <v-btn
+          flat
+          class="text-none"
           v-if="isLoggedIn"
           @click="logout"
         >
@@ -56,8 +81,8 @@
     <v-content>
       <router-view></router-view>
     </v-content>
-    <v-footer app>
-    </v-footer>
+    <!-- <v-footer app>
+    </v-footer> -->
   </v-app>
 </template>
 
@@ -74,10 +99,7 @@ export default {
       links: [
         { title: 'Цены', icon: 'local_atm', url: '/price' },
         { title: 'Портфолио', icon: 'party_mode', url: '/portfoliolist' },
-        { title: 'Контакты', icon: 'mail', url: '/contacts' },
-        { title: 'Категории', icon: '', url: '/categories' },
-        { title: 'Работы', icon: '', url: '/works' }
-
+        { title: 'Контакты', icon: 'mail', url: '/contacts' }
       ]
     }
   },

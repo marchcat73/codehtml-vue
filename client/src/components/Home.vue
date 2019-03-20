@@ -35,20 +35,12 @@
             <div class="col-lg-4 order-1 animation_2">
               <h3>Используемые технологии</h3>
               <ul>
-                <li>Вёрстка из PSD макетов</li>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>SASS</li>
-                <li>Gulp</li>
-                <li>Bootstrap</li>
-                <li>Flexbox</li>
-                <li>JavaScrypt</li>
-                <li>Node JS</li>
-                <li>MongoDB</li>
-                <li>Angular 6</li>
+                <li
+                   v-for="technology in technologies"
+                   :key="technology.name"
+                >{{technology.name}}</li>
               </ul>
-
-              <p>Bалидно, адаптивно, кроссброузерно.</p>
+              <!-- <p>Bалидно, адаптивно, кроссброузерно.</p> -->
             </div>
             <div class="col-lg-4 order-3 animation_3 personal_last_block">
               <h3>Персональная информация</h3>
@@ -72,10 +64,27 @@
     </section>
   </v-container>
 </template>
+
 <script>
 export default {
   data () {
-    return {}
+    return {
+      technologies: [
+        { name: 'Вёрстка из PSD макетов' },
+        { name: 'HTML5' },
+        { name: 'CSS3' },
+        { name: 'SASS' },
+        { name: 'Gulp' },
+        { name: 'Webpack' },
+        { name: 'Bootstrap' },
+        { name: 'Flexbox' },
+        { name: 'JavaScrypt' },
+        { name: 'Node JS' },
+        { name: 'Vue JS' },
+        { name: 'React JS' },
+        { name: 'MongoDB' }
+      ]
+    }
   }
 }
 </script>

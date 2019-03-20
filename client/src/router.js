@@ -9,6 +9,7 @@ import Price from '@/components/Content/Price'
 import Login from '@/components/Auth/Login'
 import Registration from '@/components/Auth/Registration'
 import Categories from '@/components/Admin/Categories'
+import Technologies from '@/components/Admin/Technologies'
 
 Vue.use(Router)
 
@@ -58,8 +59,15 @@ let router = new Router({
       meta: {
         requiresAuth: true
       }
+    },
+    {
+      path: '/technologies',
+      name: 'technologies',
+      component: Technologies,
+      meta: {
+        requiresAuth: true
+      }
     }
-
   ]
 })
 
