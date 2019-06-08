@@ -10,6 +10,7 @@ import Login from '@/components/Auth/Login'
 import Registration from '@/components/Auth/Registration'
 import Categories from '@/components/Admin/Categories'
 import Technologies from '@/components/Admin/Technologies'
+import Works from '@/components/Admin/Works'
 
 Vue.use(Router)
 
@@ -64,6 +65,14 @@ let router = new Router({
       path: '/technologies',
       name: 'technologies',
       component: Technologies,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/works',
+      name: 'works',
+      component: Works,
       meta: {
         requiresAuth: true
       }
